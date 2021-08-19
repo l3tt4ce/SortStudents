@@ -1,4 +1,4 @@
-#Programming Project: Sort Students
+# Programming Project: Sort Students
 
 * Exercise concerning sorting and searching taken from the book Building Java Programs: A Back to Basics Approach
 * // Write a program that processes a data file of student's course grade data. The data arrive in random order, each line stores information about a student's last name, first name, student ID, percentage grade, letter grade.
