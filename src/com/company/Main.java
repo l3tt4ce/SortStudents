@@ -9,16 +9,26 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner scanner = new Scanner(System.in);
-        List<String> list = new LinkedList<>();
-        readInput(list);
-        System.out.println("Student #1: " + list.get(0));
+        List<Student> list = new LinkedList<>();
+        readFile(list);
+
+        //list.sort(new nameComparator());
+        for (Student s : list){
+            System.out.println(s);
+        }
+
+        sort(list);
     }
 
-    public static void readInput(List<String> list) throws FileNotFoundException {
+    public static void readFile(List<Student> list) throws FileNotFoundException {
         Scanner scanner = new Scanner(new File("/home/l3ttuce/IdeaProjects/SortStudents/Students.txt"));
         while (scanner.hasNext()){
-            list.add(scanner.nextLine());
+            Student st = new Student(new LinkedList<>());
+            list.add(st);
         }
+    }
+
+    public static void sort(List<Student> list){
+        list.sort(new studentIDComparator());
     }
 }
